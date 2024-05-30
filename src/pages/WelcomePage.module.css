@@ -61,3 +61,26 @@
   margin: 10px 20px;
   width: 60%;
 }
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 768px) {
+  .imageContainer {
+    height: 60%;
+  }
+  .welcomeText {
+    text-align: center;
+    font-size: 20px;
+  }
+  .brandText {
+    font-size: 23px;
+  }
+  .descriptionText {
+    width: 90%;
+    font-size: 12px;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+}

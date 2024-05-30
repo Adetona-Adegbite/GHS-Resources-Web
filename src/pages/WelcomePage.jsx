@@ -22,7 +22,7 @@ export default function WelcomeScreen() {
           to a wide range of resources for the staff of the Ghana Health
           Services.
         </p>
-        <div style={{ display: "flex", flexDirection: "row" }}>
+        <div className={styles.buttons}>
           <WelcomeScreenButton
             onClick={() => navigate("/register")}
             bgColor="#3BC14A"
