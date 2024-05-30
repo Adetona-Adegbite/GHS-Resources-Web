@@ -16,13 +16,16 @@ export default function Login() {
   async function loginHandler() {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:2024/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await fetch(
+        "https://ghc-resource-hub-backend.adaptable.app/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to login");

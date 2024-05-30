@@ -18,13 +18,16 @@ export default function Register() {
   const emailPasswordTriggerHandler = async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:2024/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      });
+      const response = await fetch(
+        "https://ghc-resource-hub-backend.adaptable.app/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email }),
+        }
+      );
       if (!response.ok) {
         throw new Error("Something went wrong");
       }

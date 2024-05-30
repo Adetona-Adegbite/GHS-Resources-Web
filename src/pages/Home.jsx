@@ -31,7 +31,9 @@ export default function Home() {
     async function fetchFiles() {
       setLoading(true);
       try {
-        const response = await fetch("http://localhost:2024/files");
+        const response = await fetch(
+          "https://ghc-resource-hub-backend.adaptable.app/files"
+        );
         const data = await response.json();
         setItems(data);
       } catch (e) {
@@ -72,9 +74,12 @@ export default function Home() {
     if (modalType === "delete") {
       setLoadingDelete(true);
       try {
-        await fetch(`http://localhost:2024/files/${selectedItem.id}`, {
-          method: "DELETE",
-        });
+        await fetch(
+          `https://ghc-resource-hub-backend.adaptable.app/files/${selectedItem.id}`,
+          {
+            method: "DELETE",
+          }
+        );
         setItems(items.filter((item) => item.id !== selectedItem.id));
         message.success("Item deleted successfully");
       } catch (error) {
@@ -92,7 +97,7 @@ export default function Home() {
 
   const handleDownload = (item) => {
     const link = document.createElement("a");
-    link.href = `http://localhost:2024/download/${item.file_path
+    link.href = `https://ghc-resource-hub-backend.adaptable.app/download/${item.file_path
       .split("/")
       .pop()}`;
     link.download = item.title;
@@ -102,13 +107,16 @@ export default function Home() {
   const handleEdit = async (values) => {
     setLoadingUpdate(true);
     try {
-      await fetch(`http://localhost:2024/files/${selectedItem.id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+      await fetch(
+        `https://ghc-resource-hub-backend.adaptable.app/files/${selectedItem.id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        }
+      );
       setItems(
         items.map((item) =>
           item.id === selectedItem.id ? { ...item, ...values } : item
@@ -149,7 +157,7 @@ export default function Home() {
             {items.map((item) => (
               <div key={item.id} className={styles.listItem}>
                 <img
-                  src={`http://localhost:2024/${item.cover_image_path}`}
+                  src={`https://ghc-resource-hub-backend.adaptable.app/${item.cover_image_path}`}
                   alt={item.title}
                   className={styles.image}
                 />
