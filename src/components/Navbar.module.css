@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Hanunoo&display=swap");
+
+.navbar {
+  height: 8vh;
+  width: 100%;
+  background: #2b8a36;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 30px;
+  font-family: "Noto Sans Hanunoo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.navbar img {
+  height: 60%;
+  margin-left: 30px;
+}
+.navbar a {
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}

@@ -1,0 +1,63 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #4d5057;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 20%;
+  position: relative;
+  top: -50px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gradient {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.welcomeText {
+  font-size: 30px;
+  margin-top: -30px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.brandText {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #3bc14a;
+  font-size: 36px;
+}
+
+.descriptionText {
+  font-size: 15px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin: 10px 20px;
+  width: 60%;
+}

@@ -1,0 +1,87 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #4d5057;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: url("../assets/app-assets/library-image.jpg");
+  background-size: cover;
+  background-position-y: -400px;
+  background-repeat: no-repeat;
+  font-family: "Noto Sans Hanunoo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+  height: 100%;
+}
+
+.headerText {
+  font-size: 28px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.descriptionText {
+  font-size: 15px;
+  color: #ccc;
+  margin-top: 10px;
+  width: 30%;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+  width: 8%;
+}
+
+.confirmationText {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  margin-top: 100px;
+  width: 90%;
+  text-align: center;
+}
+.logo {
+  width: 8%;
+}
+
+.inputBoxContainer {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #475e4b;
+  margin-bottom: 30px;
+}
+
+.inputBoxText {
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.inputBoxInputBox {
+  color: white;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  border-bottom: 2px solid #246d2c;
+  height: 40px;
+  width: 95%;
+  background: none;
+  border: none;
+  outline: none;
+  margin-top: 5px;
+}
