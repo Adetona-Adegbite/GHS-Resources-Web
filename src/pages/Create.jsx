@@ -4,7 +4,6 @@ import { UploadOutlined } from "@ant-design/icons";
 import axios from "axios";
 import styles from "./DocumentForm.module.css";
 import { useNavigate } from "react-router-dom";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import Cookies from "universal-cookie";
 
 const { Option } = Select;
