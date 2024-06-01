@@ -1,6 +1,8 @@
 const initializeApplication = async () => {
   try {
-    const response = await fetch("http://172.20.10.3:2024/init");
+    const response = await fetch(
+      "https://ghc-resource-hub-backend.adaptable.app/init"
+    );
     if (!response.ok) {
       throw new Error("Something went wrong");
     }
@@ -11,13 +13,16 @@ const initializeApplication = async () => {
 };
 const loginRequestHandler = async (email, password) => {
   try {
-    const response = await fetch("http://172.20.10.3:2024/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password }),
-    });
+    const response = await fetch(
+      "https://ghc-resource-hub-backend.adaptable.app/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      }
+    );
 
     console.log("Initialized sucessfully");
     return response.json();
@@ -27,13 +32,16 @@ const loginRequestHandler = async (email, password) => {
 };
 const registerRequestHandler = async (email) => {
   try {
-    const response = await fetch("http://172.20.10.3:2024/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email }),
-    });
+    const response = await fetch(
+      "https://ghc-resource-hub-backend.adaptable.app/register",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      }
+    );
     if (!response.ok) {
       throw new Error("Something went wrong");
     }

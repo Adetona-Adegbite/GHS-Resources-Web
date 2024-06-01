@@ -84,3 +84,15 @@
   outline: none;
   margin-top: 5px;
 }
+@media screen and (max-width: 768px) {
+  .screen {
+    background-position-y: 0;
+  }
+  .inputBoxContainer {
+    width: 90%;
+  }
+  .descriptionText {
+    width: 75%;
+    font-size: 13px;
+  }
+}

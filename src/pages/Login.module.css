@@ -92,4 +92,8 @@
   .inputBoxContainer {
     width: 90%;
   }
+  .descriptionText {
+    width: 75%;
+    font-size: 13px;
+  }
 }
