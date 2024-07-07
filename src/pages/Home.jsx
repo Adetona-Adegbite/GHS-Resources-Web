@@ -22,6 +22,7 @@ export default function Home() {
       const userId = await cookies.get("user-id");
       if (!userId) {
         navigate("/");
+        console.log("User Id not found");
       }
     }
     checkUserId();

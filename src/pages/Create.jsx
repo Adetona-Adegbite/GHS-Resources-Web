@@ -20,6 +20,7 @@ const DocumentForm = () => {
       const userId = await cookies.get("user-id");
       if (!userId) {
         navigate("/");
+        console.log("User Id not found");
       }
     }
     checkUserId();
@@ -47,9 +48,12 @@ const DocumentForm = () => {
         }
       );
       message.success(response.data.message);
-      setInterval(() => {
-        navigate("/main");
-      }, 1000);
+      navigate("/main");
+      // const interval = setInterval(() => {
+      //   navigate("/main");
+      //   console.log("Hello World");
+      // }, 1000);
+      // clearInterval(interval);
     } catch (error) {
       message.error("Error uploading files");
     }
