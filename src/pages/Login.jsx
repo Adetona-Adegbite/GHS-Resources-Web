@@ -17,7 +17,7 @@ export default function Login() {
     setLoading(true);
     try {
       const response = await fetch(
-        "https://ghc-resource-hub-backend.adaptable.app/login",
+        "http://macolx.com/resource-hub-server/login",
         {
           method: "POST",
           headers: {

@@ -19,7 +19,7 @@ export default function Register() {
     setLoading(true);
     try {
       const response = await fetch(
-        "https://ghc-resource-hub-backend.adaptable.app/register",
+        "http://macolx.com/resource-hub-server/register",
         {
           method: "POST",
           headers: {

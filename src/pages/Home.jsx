@@ -33,7 +33,7 @@ export default function Home() {
       setLoading(true);
       try {
         const response = await fetch(
-          "https://ghc-resource-hub-backend.adaptable.app/files"
+          "http://macolx.com/resource-hub-server/files"
         );
         const data = await response.json();
         setItems(data);
@@ -76,7 +76,7 @@ export default function Home() {
       setLoadingDelete(true);
       try {
         await fetch(
-          `https://ghc-resource-hub-backend.adaptable.app/files/${selectedItem.id}`,
+          `http://macolx.com/resource-hub-server/files/${selectedItem.id}`,
           {
             method: "DELETE",
           }
@@ -98,7 +98,7 @@ export default function Home() {
 
   const handleDownload = (item) => {
     const link = document.createElement("a");
-    link.href = `https://ghc-resource-hub-backend.adaptable.app/download/${item.file_path
+    link.href = `http://macolx.com/resource-hub-server/download/${item.file_path
       .split("/")
       .pop()}`;
     link.download = item.title;
@@ -109,7 +109,7 @@ export default function Home() {
     setLoadingUpdate(true);
     try {
       await fetch(
-        `https://ghc-resource-hub-backend.adaptable.app/files/${selectedItem.id}`,
+        `http://macolx.com/resource-hub-server/files/${selectedItem.id}`,
         {
           method: "PUT",
           headers: {
@@ -158,7 +158,7 @@ export default function Home() {
             {items.map((item) => (
               <div key={item.id} className={styles.listItem}>
                 <img
-                  src={`https://ghc-resource-hub-backend.adaptable.app/${item.cover_image_path}`}
+                  src={`http://macolx.com/resource-hub-server/${item.cover_image_path}`}
                   alt={item.title}
                   className={styles.image}
                 />

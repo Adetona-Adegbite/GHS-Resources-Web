@@ -39,7 +39,7 @@ const DocumentForm = () => {
 
     try {
       const response = await axios.post(
-        "https://ghc-resource-hub-backend.adaptable.app/upload",
+        "http://macolx.com/resource-hub-server/upload",
         formData,
         {
           headers: {
