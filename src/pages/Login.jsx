@@ -17,7 +17,7 @@ export default function Login() {
     setLoading(true);
     try {
       const response = await fetch(
-        "http://macolx.com/resource-hub-server/login",
+        "https://ghc-resource-hub-fmejafgthzhedxfm.eastus-01.azurewebsites.net/login",
         {
           method: "POST",
           headers: {

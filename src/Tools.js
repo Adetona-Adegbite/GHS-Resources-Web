@@ -1,6 +1,8 @@
 const initializeApplication = async () => {
   try {
-    const response = await fetch("http://macolx.com/resource-hub-server/init");
+    const response = await fetch(
+      "https://ghc-resource-hub-fmejafgthzhedxfm.eastus-01.azurewebsites.net/init"
+    );
     if (!response.ok) {
       throw new Error("Something went wrong");
     }
@@ -12,7 +14,7 @@ const initializeApplication = async () => {
 const loginRequestHandler = async (email, password) => {
   try {
     const response = await fetch(
-      "http://macolx.com/resource-hub-server/login",
+      "https://ghc-resource-hub-fmejafgthzhedxfm.eastus-01.azurewebsites.net/login",
       {
         method: "POST",
         headers: {
@@ -31,7 +33,7 @@ const loginRequestHandler = async (email, password) => {
 const registerRequestHandler = async (email) => {
   try {
     const response = await fetch(
-      "http://macolx.com/resource-hub-server/register",
+      "https://ghc-resource-hub-fmejafgthzhedxfm.eastus-01.azurewebsites.net/register",
       {
         method: "POST",
         headers: {

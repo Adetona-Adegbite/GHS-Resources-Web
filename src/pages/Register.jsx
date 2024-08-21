@@ -19,7 +19,7 @@ export default function Register() {
     setLoading(true);
     try {
       const response = await fetch(
-        "http://macolx.com/resource-hub-server/register",
+        "https://ghc-resource-hub-fmejafgthzhedxfm.eastus-01.azurewebsites.net/register",
         {
           method: "POST",
           headers: {
