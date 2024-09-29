@@ -220,6 +220,10 @@ export default function Home() {
               <Input />
             </Form.Item>
 
+            <Form.Item name="division" label="Division">
+              <Input />
+            </Form.Item>
+
             <Form.Item>
               <Button type="primary" htmlType="submit" loading={loadingUpdate}>
                 Save

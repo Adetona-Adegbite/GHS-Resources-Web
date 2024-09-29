@@ -34,6 +34,7 @@ const DocumentForm = () => {
     formData.append("title", values.title);
     formData.append("userId", userId);
     formData.append("category", values.category);
+    formData.append("division", values.division);
     formData.append("pdf", pdfFile);
     formData.append("coverImage", coverImage);
 
@@ -118,11 +119,56 @@ const DocumentForm = () => {
           rules={[{ required: true, message: "Please select a category!" }]}
         >
           <Select placeholder="Select a category">
-            <Option value="category1">Category 1</Option>
-            <Option value="category2">Category 2</Option>
-            <Option value="category3">Category 3</Option>
-            <Option value="category4">Category 4</Option>
-            <Option value="category5">Category 5</Option>
+            <Option value="Policy">Policy</Option>
+            <Option value="Guidelines">Guidelines</Option>
+            <Option value="Strategic Plan">Strategic Plan</Option>
+            <Option value="Manual">Manual</Option>
+            <Option value="Financing">Financing</Option>
+            <Option value="Policy & Strategy">Policy & Strategy</Option>
+            <Option value="Policy & Guidelines">Policy & Guidelines</Option>
+          </Select>
+        </Form.Item>
+
+        <Form.Item
+          name="division"
+          label="Division"
+          rules={[{ required: true, message: "Please select a division!" }]}
+        >
+          <Select placeholder="Select a division">
+            <Option value="Family Health Division">
+              Family Health Division
+            </Option>
+            <Option value="Finance Division">Finance Division</Option>
+            <Option value="Health Promotion Division">
+              Health Promotion Division
+            </Option>
+            <Option value="Health Administration and Support Service Division">
+              Health Administration and Support Service Division
+            </Option>
+            <Option value="Health Resource Development Division">
+              Health Resource Development Division
+            </Option>
+            <Option value="Institution Care Division">
+              Institution Care Division
+            </Option>
+            <Option value="Internal Audit Division">
+              Internal Audit Division
+            </Option>
+            <Option value="Office of Director General">
+              Office of Director General
+            </Option>
+            <Option value="Policy, Planning, Monitoring and Evaluation Divison">
+              Policy, Planning, Monitoring and Evaluation Divison
+            </Option>
+            <Option value="Public Health Division">
+              Public Health Division
+            </Option>
+            <Option value="Research and Development Division">
+              Research and Development Division
+            </Option>
+            <Option value="Supplies, Stores and Drugs Management Division">
+              Supplies, Stores and Drugs Management Division
+            </Option>
           </Select>
         </Form.Item>
 
